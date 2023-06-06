@@ -1,0 +1,327 @@
+units:
+  thb_sp: 21.25
+  px: cx+4
+  py: cy+4
+points:
+  key:
+    padding: cx
+    width: cx
+    height: cy
+  zones:
+    matrix:
+      # Fix placement on KiCAD sheet.
+      anchor:
+        shift: [75, -125]
+      key.spread: 18
+      columns:
+        outerp:
+          key.column_net: P008
+        pinky:
+          key:
+            stagger: 2
+            splay: -2
+            spread: cx+1
+            column_net: P022
+        ring:
+          key:
+            stagger: 8
+            spread: cx+2
+            splay: -10
+            column_net: P024
+        middle:
+          key:
+            stagger: 6
+            splay: -2
+            spread: cx+1
+            column_net: P031
+        index:
+          key:
+            stagger: -9
+            spread: cx+1
+            splay: -2
+            column_net: P032
+        inner:
+          key:
+            stagger: -2
+            spread: cx+1
+            splay: -2
+            column_net: P002
+        center:
+          key:
+            skip: true
+            stagger: -2
+            column_net: P002
+          rows:
+            home.skip: false
+            home.row_net: P101
+            home.mirror.row_net: P009
+      rows:
+        bottom:
+          row_net: P106
+          mirror.row_net: P010
+        home:
+          row_net: P104
+          mirror.row_net: P111
+        top:
+          row_net: P011
+          mirror.row_net: P113
+        num:
+          row_net: P100
+          mirror.row_net: P115
+    thumbfan:
+        anchor:
+          ref: matrix_middle_bottom
+          shift: [1,-29]
+        columns:
+          outerth:
+            key:
+              splay: 5
+              column_net: P022
+          middle:
+            key:
+              spread: thb_sp
+              splay: -10
+              origin: [-10]
+              column_net: P024
+          layer:
+            key:
+              spread: thb_sp
+              splay: -10
+              origin: [-10]
+              column_net: P031
+          main:
+            key:
+              width: 1.5cx
+              rotate: -90
+              stagger: 6
+              spread: thb_sp
+              splay: -5
+              origin: [-10]
+              column_net: P032
+        rows:
+          thumb:
+            row_net: P101
+            mirror.row_net: P009
+
+  rotate: -6
+  mirror:
+    ref: matrix_center_home
+    distance: 66
+outlines:
+  keys:
+    - what: rectangle
+      where: true
+      size: [cx-0.5,cy-0.5]
+  switches:
+    - what: rectangle
+      where: true
+      size: [13.8, 13.8]
+  battery:
+    - what: rectangle
+      size: [36,52]
+      where:
+        ref.aggregate.parts: [matrix_center_home, mirror_matrix_center_home]
+        shift: [0,-20]
+  board:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: matrix_outerp_num
+          shift: [-0.5px,0.5py]
+        - ref: matrix_pinky_num
+          shift: [0.5px,0.75py]
+        - ref: matrix_ring_num
+          shift: [-0.5px,0.5py]
+        - ref: matrix_middle_num
+          shift: [-0.5px,0.5py]
+        - ref: matrix_middle_num
+          shift: [0.5px,0.6py]
+        - ref: mirror_matrix_middle_num
+          shift: [0.5px,0.6py]
+        - ref: mirror_matrix_middle_num
+          shift: [-0.5px,0.5py]
+        - ref: mirror_matrix_ring_num
+          shift: [-0.5px,0.5py]
+        - ref: mirror_matrix_pinky_num
+          shift: [0.5px,0.75py]
+        - ref: mirror_matrix_outerp_num
+          shift: [-0.5px,0.5py]
+        - ref: mirror_matrix_outerp_bottom
+          shift: [-0.5px,-0.5py]
+        - ref: mirror_matrix_pinky_bottom
+          shift: [0.3px,-0.7py]
+        - ref: mirror_thumbfan_outerth_thumb
+          shift: [-0.5px,-0.5py]
+        - ref: mirror_thumbfan_main_thumb
+          shift: [0.75py,0.5px]
+        - ref: thumbfan_main_thumb
+          shift: [0.75py,0.5px]
+        - ref: thumbfan_outerth_thumb
+          shift: [-0.5px,-0.5py]
+        - ref: matrix_pinky_bottom
+          shift: [0.3px,-0.7py]
+        - ref: matrix_outerp_bottom
+          shift: [-0.5px,-0.5py]
+      fillet: 2
+  plate_out:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: matrix_outerp_num
+          shift: [-0.5px,0.5py]
+        - ref: matrix_pinky_num
+          shift: [0.5px,0.75py]
+        - ref: matrix_ring_num
+          shift: [-0.5px,0.5py]
+        - ref: matrix_middle_num
+          shift: [-0.5px,0.5py]
+        - ref: matrix_middle_num
+          shift: [0.5px,0.6py]
+        - ref: matrix_index_num
+          shift: [0.5px,0.5py]
+        - ref: matrix_inner_num
+          shift: [0.5px,0.5py]
+        - ref: matrix_center_home
+          shift: [0.5px,0.5cy]
+        - ref: mirror_matrix_center_home
+          shift: [0.5px,0.5cy]
+        - ref: mirror_matrix_inner_num
+          shift: [0.5px,0.5py]
+        - ref: mirror_matrix_index_num
+          shift: [0.5px,0.5py]
+        - ref: mirror_matrix_middle_num
+          shift: [0.5px,0.6py]
+        - ref: mirror_matrix_middle_num
+          shift: [-0.5px,0.5py]
+        - ref: mirror_matrix_ring_num
+          shift: [-0.5px,0.5py]
+        - ref: mirror_matrix_pinky_num
+          shift: [0.5px,0.75py]
+        - ref: mirror_matrix_outerp_num
+          shift: [-0.5px,0.5py]
+        - ref: mirror_matrix_outerp_bottom
+          shift: [-0.5px,-0.5py]
+        - ref: mirror_matrix_pinky_bottom
+          shift: [0.3px,-0.7py]
+        - ref: mirror_thumbfan_outerth_thumb
+          shift: [-0.5px,-0.5py]
+        - ref: mirror_thumbfan_main_thumb
+          shift: [0.75py,0.5px]
+        - ref: thumbfan_main_thumb
+          shift: [0.75py,0.5px]
+        - ref: thumbfan_outerth_thumb
+          shift: [-0.5px,-0.5py]
+        - ref: matrix_pinky_bottom
+          shift: [0.3px,-0.7py]
+        - ref: matrix_outerp_bottom
+          shift: [-0.5px,-0.5py]
+      fillet: 0
+  combo:
+    - name: board
+    - operation: subtract
+      name: keys
+    - operation: subtract
+      name: battery
+  cutboard:
+    - name: board
+    - operation: subtract
+      name: battery
+  plate:
+    - name: plate_out
+    - operation: subtract
+      name: switches
+pcbs:
+  SpUnLy58_Plate:
+    outlines:
+      main:
+        outline: plate
+  SpUnLy58:
+    outlines:
+      main:
+        outline: cutboard
+    footprints:
+      choc_hotswap:
+        what: choc
+        where: true
+        params:
+          keycaps: true
+          reverse: false
+          hotswap: true
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+      diode:
+        what: diode
+        where: true
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          shift: [0, -5]
+      nice_nano:
+        what: nice_nano
+        params:
+          orientation: "up"
+        where:
+          ref.aggregate.parts: [matrix_inner_num, mirror_matrix_inner_num]
+          shift: [0,3.5]
+          rotate: -90
+      nice_view:
+        what: nice_view
+        params:
+          SDA: P017
+          SCL: P020
+          CS: P006
+        where:
+          ref.aggregate.parts: [matrix_inner_top, mirror_matrix_inner_top]
+          shift: [-18,-3.5]
+      reset:
+        what: EVQPUC
+        params:
+          from: GND
+          to: RST
+        where:
+          ref.aggregate.parts: [matrix_index_num, mirror_matrix_index_num]
+          shift: [-20,3]
+      jstph:
+        what: jstph
+        params:
+          pos: pos
+          neg: GND
+        where:
+          ref.aggregate.parts: [matrix_inner_top, mirror_matrix_inner_top]
+          shift: [11.25,-15]
+          rotate: 90
+      pwr_sw:
+        what: slider
+        params:
+          from: pos
+          to: RAW
+        where:
+          ref.aggregate.parts: [matrix_index_num, mirror_matrix_index_num]
+          shift: [20,3]
+      mount_OTL:
+        what: m2_through
+        where:
+          ref.aggregate.parts: [matrix_pinky_num, matrix_ring_num]
+      mount_OTR:
+        what: m2_through
+        where:
+          ref.aggregate.parts: [mirror_matrix_pinky_num, mirror_matrix_ring_num]
+      mount_OBL:
+        what: m2_through
+        where:
+          ref.aggregate.parts: [matrix_pinky_bottom, thumbfan_outerth_thumb]
+      mount_OBR:
+        what: m2_through
+        where:
+          ref.aggregate.parts: [mirror_matrix_pinky_bottom, mirror_thumbfan_outerth_thumb]
+      mount_CBL:
+        what: m2_through
+        where:
+          ref.aggregate.parts: [matrix_inner_bottom, thumbfan_main_thumb]
+          shift: [2,3]
+      mount_CBR:
+        what: m2_through
+        where:
+          ref.aggregate.parts: [mirror_matrix_inner_bottom, mirror_thumbfan_main_thumb]
+          shift: [-2,3]

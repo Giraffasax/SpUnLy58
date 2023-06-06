@@ -1,0 +1,22 @@
+Input, Arduino Lab, NNv2 Lab
+View CS, D1, P0.06
+Col0, D0, P0.08
+View SDA, D2, P0.17
+View SLA, D3, P0.20
+Col1, D4, P0.22
+Col2, D5, P0.24
+Row0, D6, P1.00
+Row1, D7, P0.11
+Row2, D8, P1.04
+Row3, D9, P1.06
+
+Row4, --, P1.01  <&gpio1 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+
+Col3, D21, P0.31
+Col4, D20, P0.32
+Col5, D19, P0.02
+Row5, D18, P1.15
+Row6, D15, P1.13
+Row7, D14, P1,11
+Row8, D16, P0.10
+Row9, D10, P0.09

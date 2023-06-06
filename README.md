@@ -1,2 +1,2 @@
 # SpUnLy58
-A Splayed Unibody Lily58 layout keyboard project. Ergogen and KiCad Files
+A **Sp**layed **Un**ibody Li**ly58** layout keyboard project. Ergogen and KiCad Files
