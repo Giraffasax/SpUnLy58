@@ -180,13 +180,17 @@ outlines:
         - ref: matrix_index_num
           shift: [0.5px,0.5py]
         - ref: matrix_inner_num
-          shift: [0.5px,0.5py]
-        - ref: matrix_center_home
-          shift: [0.5px,0.5cy]
-        - ref: mirror_matrix_center_home
-          shift: [0.5px,0.5cy]
+          orient: 24
+          shift: [14,5]
+        - ref: matrix_inner_num
+          orient: 24
+          shift: [14,-39]
         - ref: mirror_matrix_inner_num
-          shift: [0.5px,0.5py]
+          orient: 24
+          shift: [14,-39]
+        - ref: mirror_matrix_inner_num
+          orient: 24
+          shift: [14,5]
         - ref: mirror_matrix_index_num
           shift: [0.5px,0.5py]
         - ref: mirror_matrix_middle_num
@@ -215,7 +219,7 @@ outlines:
           shift: [0.3px,-0.7py]
         - ref: matrix_outerp_bottom
           shift: [-0.5px,-0.5py]
-      fillet: 0
+      fillet: 2
   combo:
     - name: board
     - operation: subtract
@@ -231,22 +235,16 @@ outlines:
     - operation: subtract
       name: switches
 pcbs:
-  SpUnLy58_Plate:
-    outlines:
-      main:
-        outline: plate
   SpUnLy58:
     outlines:
       main:
         outline: cutboard
     footprints:
       choc_hotswap:
-        what: choc
+        what: choc_combo
         where: true
         params:
           keycaps: true
-          reverse: false
-          hotswap: true
           from: "{{column_net}}"
           to: "{{colrow}}"
       diode:
@@ -256,7 +254,9 @@ pcbs:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
-          shift: [0, -5]
+          shift: [8.25, -4]
+          rotate: 90
+          resist: true
       nice_nano:
         what: nice_nano
         params:
@@ -307,6 +307,16 @@ pcbs:
         what: m2_through
         where:
           ref.aggregate.parts: [mirror_matrix_pinky_num, mirror_matrix_ring_num]
+      mount_CTL:
+        what: m2_through
+        where:
+          ref.aggregate.parts: [matrix_middle_num, mirror_matrix_middle_num]
+          shift: [-54.5,-0.75]
+      mount_CTR:
+        what: m2_through
+        where:
+          ref.aggregate.parts: [matrix_middle_num, mirror_matrix_middle_num]
+          shift: [54.5,-0.75]
       mount_OBL:
         what: m2_through
         where:
@@ -318,10 +328,122 @@ pcbs:
       mount_CBL:
         what: m2_through
         where:
-          ref.aggregate.parts: [matrix_inner_bottom, thumbfan_main_thumb]
-          shift: [2,3]
+          ref.aggregate.parts: [matrix_center_home, thumbfan_layer_thumb]
+          shift: [5,0]
       mount_CBR:
         what: m2_through
         where:
-          ref.aggregate.parts: [mirror_matrix_inner_bottom, mirror_thumbfan_main_thumb]
-          shift: [-2,3]
+          ref.aggregate.parts: [mirror_matrix_center_home, mirror_thumbfan_layer_thumb]
+          shift: [-5,0]
+      mount_CML:
+        what: m2_through
+        where:
+          ref: matrix_center_home
+          shift: [-0.25cx,0.65py]
+      mount_CMR:
+        what: m2_through
+        where:
+          ref: mirror_matrix_center_home
+          shift: [-0.25cx,0.65py]
+  SpUnLy58_Plate:
+    outlines:
+      main:
+        outline: plate
+    footprints:
+      mount_OTL:
+        what: m2_mount
+        where:
+          ref.aggregate.parts: [matrix_pinky_num, matrix_ring_num]
+      mount_OTR:
+        what: m2_mount
+        where:
+          ref.aggregate.parts: [mirror_matrix_pinky_num, mirror_matrix_ring_num]
+      mount_CTL:
+        what: m2_mount
+        where:
+          ref.aggregate.parts: [matrix_middle_num, mirror_matrix_middle_num]
+          shift: [-54.5,-0.75]
+      mount_CTR:
+        what: m2_mount
+        where:
+          ref.aggregate.parts: [matrix_middle_num, mirror_matrix_middle_num]
+          shift: [54.5,-0.75]
+      mount_OBL:
+        what: m2_mount
+        where:
+          ref.aggregate.parts: [matrix_pinky_bottom, thumbfan_outerth_thumb]
+      mount_OBR:
+        what: m2_mount
+        where:
+          ref.aggregate.parts: [mirror_matrix_pinky_bottom, mirror_thumbfan_outerth_thumb]
+      mount_CBL:
+        what: m2_mount
+        where:
+          ref.aggregate.parts: [matrix_center_home, thumbfan_layer_thumb]
+          shift: [5,0]
+      mount_CBR:
+        what: m2_mount
+        where:
+          ref.aggregate.parts: [mirror_matrix_center_home, mirror_thumbfan_layer_thumb]
+          shift: [-5,0]
+      mount_CML:
+        what: m2_mount
+        where:
+          ref: matrix_center_home
+          shift: [-0.25cx,0.65py]
+      mount_CMR:
+        what: m2_mount
+        where:
+          ref: mirror_matrix_center_home
+          shift: [-0.25cx,0.65py]
+  SpUnLy58_Bottom:
+    outlines:
+      main:
+        outline: board
+    footprints:
+      mount_OTL:
+        what: m2_mount
+        where:
+          ref.aggregate.parts: [matrix_pinky_num, matrix_ring_num]
+      mount_OTR:
+        what: m2_mount
+        where:
+          ref.aggregate.parts: [mirror_matrix_pinky_num, mirror_matrix_ring_num]
+      mount_CTL:
+        what: m2_mount
+        where:
+          ref.aggregate.parts: [matrix_middle_num, mirror_matrix_middle_num]
+          shift: [-54.5,-0.75]
+      mount_CTR:
+        what: m2_mount
+        where:
+          ref.aggregate.parts: [matrix_middle_num, mirror_matrix_middle_num]
+          shift: [54.5,-0.75]
+      mount_OBL:
+        what: m2_mount
+        where:
+          ref.aggregate.parts: [matrix_pinky_bottom, thumbfan_outerth_thumb]
+      mount_OBR:
+        what: m2_mount
+        where:
+          ref.aggregate.parts: [mirror_matrix_pinky_bottom, mirror_thumbfan_outerth_thumb]
+      mount_CBL:
+        what: m2_mount
+        where:
+          ref.aggregate.parts: [matrix_center_home, thumbfan_layer_thumb]
+          shift: [5,0]
+      mount_CBR:
+        what: m2_mount
+        where:
+          ref.aggregate.parts: [mirror_matrix_center_home, mirror_thumbfan_layer_thumb]
+          shift: [-5,0]
+      mount_CML:
+        what: m2_mount
+        where:
+          ref: matrix_center_home
+          shift: [-0.25cx,0.65py]
+      mount_CMR:
+        what: m2_mount
+        where:
+          ref: mirror_matrix_center_home
+          shift: [-0.25cx,0.65py]

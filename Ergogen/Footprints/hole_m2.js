@@ -1,6 +1,6 @@
 module.exports = {
     params: {
-      net: undefined
+      class: 'HOLE',
     },
     body: p => `
       (module HOLE_M2 (layer F.Cu) (tedit 5AB4F321) 

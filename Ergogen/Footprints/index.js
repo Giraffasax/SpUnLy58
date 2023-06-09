@@ -2,6 +2,7 @@ module.exports = {
     alps: require('./alps'),
     button: require('./button'),
     choc: require('./choc'),
+    choc_combo: require('./Kailh_Socket_PG1350_mkultra'),
     chocmini: require('./chocmini'),
     diode: require('./diode'),
     EVQPUC: require('./EVQPUC'),
