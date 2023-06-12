@@ -39,7 +39,7 @@ points:
             stagger: -9
             spread: cx+1
             splay: -2
-            column_net: P032
+            column_net: P029
         inner:
           key:
             stagger: -2
@@ -97,7 +97,7 @@ points:
               spread: thb_sp
               splay: -5
               origin: [-10]
-              column_net: P032
+              column_net: P029
         rows:
           thumb:
             row_net: P101
