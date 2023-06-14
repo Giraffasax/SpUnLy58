@@ -339,12 +339,12 @@ pcbs:
         what: m2_through
         where:
           ref: matrix_center_home
-          shift: [-0.25cx,0.65py]
+          shift: [-3.5,14]
       mount_CMR:
         what: m2_through
         where:
           ref: mirror_matrix_center_home
-          shift: [-0.25cx,0.65py]
+          shift: [-3.5,14]
   SpUnLy58_Plate:
     outlines:
       main:
@@ -390,12 +390,12 @@ pcbs:
         what: m2_mount
         where:
           ref: matrix_center_home
-          shift: [-0.25cx,0.65py]
+          shift: [-3.5,14]
       mount_CMR:
         what: m2_mount
         where:
           ref: mirror_matrix_center_home
-          shift: [-0.25cx,0.65py]
+          shift: [-3.5,14]
   SpUnLy58_Bottom:
     outlines:
       main:
@@ -441,9 +441,9 @@ pcbs:
         what: m2_mount
         where:
           ref: matrix_center_home
-          shift: [-0.25cx,0.65py]
+          shift: [-3.5,14]
       mount_CMR:
         what: m2_mount
         where:
           ref: mirror_matrix_center_home
-          shift: [-0.25cx,0.65py]
+          shift: [-3.5,14]
