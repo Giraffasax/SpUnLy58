@@ -8,7 +8,8 @@ module.exports = {
       ${'' /* footprint reference */}
 
       (fp_text reference "${p.ref}" (at 0 0) (layer Eco2.User) hide (effects (font (size 0.29972 0.29972) (thickness 0.07493))))
-      (fp_text value VAL** (at 0 1.75) (layer Eco2.User) hide (effects (font (size 0.29972 0.29972) (thickness 0.07493))))
-      (pad "" np_thru_hole circle (at 0 0) (size 2.2 2.2) (drill 2.2) (layers *.Cu *.Mask F.SilkS) (clearance 0.8)))
+      (pad "1" thru_hole circle (at 0 0) (size 2.6 2.6) (drill 2.2) (layers "*.Cu" "*.Mask"))
+      (pad "1" connect circle (at 0 0) (size 4.4 4.4) (layers "F.Cu" "F.Mask"))
+      (pad "1" connect circle (at 0 0) (size 4.4 4.4) (layers "B.Cu" "B.Mask")))
     `
 }
