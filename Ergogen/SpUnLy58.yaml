@@ -115,7 +115,7 @@ outlines:
   switches:
     - what: rectangle
       where: true
-      size: [13.8, 13.8]
+      size: [14, 14]
   battery:
     - what: rectangle
       size: [36,52]
