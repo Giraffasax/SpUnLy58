@@ -4,7 +4,8 @@ units:
   py: cy+4
 points:
   key:
-    padding: cx
+    spread: cx
+    padding: cy
     width: cx
     height: cy
   zones:
@@ -12,7 +13,6 @@ points:
       # Fix placement on KiCAD sheet.
       anchor:
         shift: [75, -125]
-      key.spread: 18
       columns:
         outerp:
           key.column_net: P008
@@ -118,10 +118,10 @@ outlines:
       size: [14, 14]
   battery:
     - what: rectangle
-      size: [36,52]
+      size: [37,57]
       where:
         ref.aggregate.parts: [matrix_center_home, mirror_matrix_center_home]
-        shift: [0,-20]
+        shift: [0,-22.5]
   board:
     - what: polygon
       operation: stack
@@ -283,14 +283,14 @@ pcbs:
           ref.aggregate.parts: [matrix_index_num, mirror_matrix_index_num]
           shift: [-20,3]
       jstph:
-        what: jstph
+        what: jstph_flip
         params:
           pos: pos
           neg: GND
         where:
           ref.aggregate.parts: [matrix_inner_top, mirror_matrix_inner_top]
-          shift: [11.25,-15]
-          rotate: 90
+          shift: [17,-15]
+          rotate: -90
       pwr_sw:
         what: slider
         params:
