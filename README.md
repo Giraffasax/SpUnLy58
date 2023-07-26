@@ -2,6 +2,7 @@
 The SpUnLy58 is **Sp**layed **Un**ibody Li**ly58** layout [6*4 + 4key] keyboard. This is a minimal design keyboard that is wireless first. This design requires a Nice!Nano v2, supports a Nice!View,there are no LEDs, and a case is recommended to protect the up to 750mAh battery.
 
 ![SpUnLy58_v1](Reference/SpUnLy58_v1.jpg)
+Build of SpUnLy v1.0 
 
 ## Notable Features
 - Choc V1 support [Hotswap and Soldered]
@@ -13,14 +14,19 @@ The SpUnLy58 is **Sp**layed **Un**ibody Li**ly58** layout [6*4 + 4key] keyboard.
 - Nice!View Support
 - JST Battery Connector
 
+## SpUnLy58 v1.1 Updates
+- Reduced vertical spacing from 18mm -> 17mm
+- Increased battery cutout from 36x52mm -> 37x57mm
+- Fixed incorrect JST connector footprint
+___
 ![v1_PCB_top](Reference/SpUnLy58_v1_PCB_top.png)
-SpUnLy58 v1 PCB top
+SpUnLy58 v1 PCB
 
-![v1_PCB_bottom](Reference/SpUnLy58_v1_PCB_bottom.png)
-SpUnLy58 v1 PCB bottom
+![v1p1_PCB_top](Reference/SpUnLy58_v1p1_PCB_top.png)
+SpUnLy58 v1.1 PCB
 
 ___
-## Parts List
+## Parts List [v1.1 is untested, go to v1p0 branch if you want a PCB that is verified to work]
 | Name | Quantity | Example URL |
 |------|----------|-------------|
 | SpUnLy58 PCB | 1  | https://github.com/Giraffasax/SpUnLy58/blob/main/KiCad/Gerber/SpUnLy58_Gerber.zip |
