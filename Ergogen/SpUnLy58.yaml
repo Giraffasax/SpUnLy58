@@ -1,5 +1,5 @@
 units:
-  thb_sp: 19.25
+  thb_sp: 19.75
   px: cx+3
   py: cy+3
 points:
@@ -69,39 +69,39 @@ points:
     thumbfan:
         anchor:
           ref: matrix_middle_bottom
-          shift: [8,-31]
+          shift: [8,-30]
         columns:
           outerth:
             key:
-              splay: -2
+              splay: 8
               column_net: P022
           middle:
             key:
               spread: thb_sp
-              splay: -8
+              splay: -12
               stagger: 0
               origin: [-10]
               column_net: P024
           layer:
             key:
               spread: thb_sp
-              splay: -8
+              splay: -12
               origin: [-10]
               column_net: P031
           main:
             key:
               width: 1.5cx
               rotate: 90
-              stagger: 1
-              spread: thb_sp
-              splay: -10
+              stagger: 0
+              spread: thb_sp+0.5
+              splay: -18
               origin: [-10]
               column_net: P029
         rows:
           thumb:
             row_net: P101
             mirror.row_net: P009
-  rotate: -5
+  rotate: -7
   mirror:
     ref: matrix_center_home
     distance: 75
@@ -126,6 +126,8 @@ outlines:
       points:
         - ref: thumbfan_main_thumb
           shift: [-0.75py,-0.5px]
+        - ref: thumbfan_layer_thumb
+          shift: [-0.5px,-0.7py]
         - ref: matrix_pinky_bottom
           shift: [0.3px,-0.7py]
         - ref: matrix_outerp_bottom
@@ -154,6 +156,8 @@ outlines:
           shift: [-0.5px,-0.5py]
         - ref: mirror_matrix_pinky_bottom
           shift: [0.5px,-0.75py]
+        - ref: mirror_thumbfan_layer_thumb
+          shift: [-0.5px,-0.7py]
         - ref: mirror_thumbfan_main_thumb
           shift: [-0.75py,-0.5px]
       fillet: 2
@@ -163,6 +167,8 @@ outlines:
       points:
         - ref: thumbfan_main_thumb
           shift: [-0.75py,-0.5px]
+        - ref: thumbfan_layer_thumb
+          shift: [-0.5px,-0.7py]
         - ref: matrix_pinky_bottom
           shift: [0.3px,-0.7py]
         - ref: matrix_outerp_bottom
@@ -180,16 +186,16 @@ outlines:
         - ref: matrix_index_num
           shift: [0.6px,0.6py]
         - ref: matrix_inner_num
-          orient: 19
+          orient: 21
           shift: [22.5,5]
         - ref: matrix_inner_num
-          orient: 19
+          orient: 21
           shift: [22.5,-39]
         - ref: mirror_matrix_inner_num
-          orient: 19
+          orient: 21
           shift: [22.5,-39]
         - ref: mirror_matrix_inner_num
-          orient: 19
+          orient: 21
           shift: [22.5,5]
         - ref: mirror_matrix_index_num
           shift: [0.6px,0.6py]
@@ -207,6 +213,8 @@ outlines:
           shift: [-0.5px,-0.5py]
         - ref: mirror_matrix_pinky_bottom
           shift: [0.5px,-0.75py]
+        - ref: mirror_thumbfan_layer_thumb
+          shift: [-0.5px,-0.7py]
         - ref: mirror_thumbfan_main_thumb
           shift: [-0.75py,-0.5px]
       fillet: 2
