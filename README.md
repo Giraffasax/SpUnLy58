@@ -2,7 +2,7 @@
 The SpUnLy58 is **Sp**layed **Un**ibody Li**ly58** layout [6*4 + 4key] keyboard. This is a minimal design keyboard that is wireless first. This design requires a Nice!Nano v2, supports a Nice!View,there are no LEDs, and a case is recommended to protect the up to 750mAh battery.
 
 ![SpUnLy58_v1](Reference/SpUnLy58_v1p2.jpg)
-Build of SpUnLy v1.0 
+<p style="text-align: center;">Build of SpUnLy v1.2 <p>
 
 ## Notable Features
 - Choc V1 support [Hotswap and Soldered]
@@ -24,15 +24,18 @@ Build of SpUnLy v1.0
 - Increased pinky stagger
 - Reduced thumb key spacing and increased fan angle
 - Added Ground fill
+
+### Sponsor:
+PCBway sponsored the manufacturing of v1.2 main pcb and the stainless steel bottom plates. If you would like to see more pictures and read my review see them [here.](Reference/PCBWay_Review.md)
 ___
 ![v1_PCB_top](Reference/SpUnLy58_v1_PCB_top.png)
-SpUnLy58 v1 PCB
+<p style="text-align: center;">SpUnLy58 v1 PCB<p>
 
 ![v1p1_PCB_top](Reference/SpUnLy58_v1p1_PCB_top.png)
-SpUnLy58 v1.1 PCB
+<p style="text-align: center;">SpUnLy58 v1.1 PCB<p>
 
 ![v1p2_PCB_top](Reference/SpUnLy58_v1p2_PCB_top.png)
-SpUnLy58 v1.2 PCB
+<p style="text-align: center;">SpUnLy58 v1.2 PCB<p>
 
 ___
 ## Parts List 
